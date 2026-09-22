@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Верхняя плашка -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#2E7D32"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Создание заявки (ремонт)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"/>
+        </LinearLayout>
+
+        <!-- Контент -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Имя владельца -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Имя владельца"
+                android:textColor="#ECECEC"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etOwner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_bg"
+                android:hint="Например: Иван Петров"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8E8E8E"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:inputType="textCapWords|textPersonName"/>
+            <TextView
+                android:id="@+id/tvOwnerError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Укажите имя владельца"
+                android:textColor="#EF5350"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Телефон -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Телефон"
+                android:textColor="#ECECEC"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_bg"
+                android:hint="+7 (___) ___-__-__"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8E8E8E"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:inputType="phone"/>
+            <TextView
+                android:id="@+id/tvPhoneError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Укажите корректный телефон"
+                android:textColor="#EF5350"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Модель авто -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Модель авто"
+                android:textColor="#ECECEC"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etModel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/input_bg"
+                android:hint="Например: Audi TT"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8E8E8E"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:inputType="textCapWords"/>
+            <TextView
+                android:id="@+id/tvModelError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Укажите модель автомобиля"
+                android:textColor="#EF5350"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Описание неисправности -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Описание неисправности"
+                android:textColor="#ECECEC"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/input_bg"
+                android:gravity="top|start"
+                android:hint="Кратко опишите проблему"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#8E8E8E"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:inputType="textMultiLine"
+                android:maxLines="5"/>
+
+            <!-- Дата / Время -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/btnPickDate"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@null"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="Выберите дату"
+                    android:contentDescription="Выбрать дату"
+                    android:tooltipText="Выбрать дату"/>
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/btnPickTime"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@null"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="Выберите время"
+                    android:contentDescription="Выбрать время"
+                    android:tooltipText="Выбрать время"/>
+            </LinearLayout>
+
+            <!-- Итог: выбранные дата/время -->
+            <TextView
+                android:id="@+id/tvPicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Дата: —    Время: —"
+                android:textColor="#8E8E8E"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Отправить -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_primary"
+                android:backgroundTint="@null"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="Отправить заявку"
+                android:contentDescription="Отправить заявку на ремонт"
+                android:tooltipText="Отправить заявку"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

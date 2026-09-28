@@ -24,7 +24,7 @@
             android:text="16.11.2024"
             android:textSize="14sp"/>
         <TextView
-            android:id="@+id/tvStatus"
+            android:id="@+id/tvTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="в работе"

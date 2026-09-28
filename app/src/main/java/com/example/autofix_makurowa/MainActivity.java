@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         startClock();
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
